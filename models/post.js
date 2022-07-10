@@ -33,13 +33,6 @@ Post.init(
         }
     },
     {
-        hooks: {
-            beforeCreate: async (newPostData) => {
-                newPostData.title = trim(newPostData.title);
-                newPostData.post_content = trim(newPostData.post_content);
-                return newPostData;
-            }
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,

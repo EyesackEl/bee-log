@@ -36,12 +36,6 @@ Comment.init(
         }
     },
     {
-    hooks: {
-        beforeCreate: async (newCommentData) => {
-            newCommentData.comment_text = newCommentData.comment_text.trim();
-            return newCommentData;
-        }
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
