@@ -5,13 +5,13 @@
       "user_id": 1
     },
     {
-        "title": "Test Title 2",
-        "post_content": "Test Content 2",
-        "user_id": 3
+      "title": "Test Title 2",
+      "post_content": "Test Content 2",
+      "user_id": 3
     },
     {
-    "title": "Test Title 3",
-    "post_content": "Test Content 3",
-    "user_id": 2
+      "title": "Test Title 3",
+      "post_content": "Test Content 3",
+      "user_id": 2
     }
 ]

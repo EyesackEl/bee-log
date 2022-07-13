@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {User} = require('../../models')
 
+// Handles sign up requests
 router.put('/', async (req, res) => {
     try {
         const userData = await user.create(req.body);
@@ -16,6 +17,7 @@ router.put('/', async (req, res) => {
     }
 });
 
+// Handles login requests
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: {email: req.body.email }});
@@ -53,3 +55,5 @@ router.post('/logout', (req, res) => {
         res.status(404).json(err).end();
     }
 });
+
+module.exports = router;
