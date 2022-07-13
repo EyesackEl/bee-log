@@ -1,11 +1,13 @@
 const router = require('express').Router();
 const {User} = require('../../models')
 
-// Handles sign up requests
-router.put('/', async (req, res) => {
-    try {
-        const userData = await user.create(req.body);
+//* /api/user endpoint
 
+// Handles sign up requests
+router.post('/', async (req, res) => {
+    try {
+        const userData = await User.create(req.body);
+        console.log(userData);
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -21,7 +23,7 @@ router.put('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: {email: req.body.email }});
-        
+        console.log(`\n\t${userData} CONSOLE.LOG`);
         if (!userData) {
             res.status(400).json('Incorrect login credentials');
             return;
@@ -33,9 +35,9 @@ router.post('/login', async (req, res) => {
             res.status(400).json('Incorrect login credentials');
             return;
         };
-
+        
         req.session.save(() => {
-            req.sesion.user_id = userData.id;
+            req.session.user_id = userData.id;
             req.session.logged_in = true;
 
             res.status(200).json({ user: userData, message: 'Login Succesful!'})
@@ -46,6 +48,7 @@ router.post('/login', async (req, res) => {
 });
 
 //; Call this when timer runs out to log out user after inactivity
+// Handles logout requests
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {

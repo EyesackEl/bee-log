@@ -1,0 +1,29 @@
+<div id='postBox' class="container my-3 bdr post">
+    <div class="post-header text-left">
+        <h3>
+            {{post.title}}
+        </h3>
+        <h6>Posted by {{post.user.name}} on {{format_date post.created_on}} </h6>
+    </div>
+
+    <br>
+
+    <div class="post-content text-left">
+        <p>{{post.post_content}}</p>
+    </div>
+
+    <button id='addCommentBtn' class="btn btn-info" role="button">Add a Comment</button>
+</div>
+{{#each comments as |comment|}}
+    <div class="container my-3 bdr comment">
+        <div class="comment-header text-end">
+            <h5>
+                <strong>{{comment.user.name}}</strong> commented on {{format_date comment.created_on}}
+            </h5>
+        </div>
+        
+        <div class="comment-content text-end">
+            <p>{{comment.comment_text}}</p>
+        </div>
+    </div>
+{{/each}}

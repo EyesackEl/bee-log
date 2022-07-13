@@ -30,7 +30,8 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//Serves all files to client from the 'public' folder
+
+//Serves all files to user from the 'public' folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

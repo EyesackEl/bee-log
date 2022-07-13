@@ -1,0 +1,14 @@
+{{#each posts as |post|}}
+    <div class="container my-3 bdr post">
+                <div class="post-header text-left">
+                    <h3>
+                        <a href = "/post/{{post.id}}">{{post.title}}</a>
+                    </h3>
+                    <h6>Posted by {{user.name}} on {{format_date post.created_on}} </h6>
+                </div>
+                <br>
+                <div class="post-content">
+                    <p> {{post.post_content}}</p>
+                </div>
+            </div>
+{{/each}}
