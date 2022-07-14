@@ -1,14 +1,15 @@
 {{#each posts as |post|}}
-    <div class="container my-3 bdr post">
-                <div class="post-header text-left">
-                    <h3>
-                        <a href = "/user/post/{{post.id}}">{{post.title}}</a>
-                    </h3>
-                    <h6>Posted by {{user.name}} on {{format_date post.created_on}} </h6>
-                </div>
-                <br>
-                <div class="post-content">
-                    <p> {{post.post_content}}</p>
-                </div>
-            </div>
+<div class="container my-3 bdr postSnip postBox">
+    <div class="post-header text-left">
+        <h3>
+            <a href='/dashboard/post/{{post.id}}'>{{post.title}}</a>
+        </h3>
+        <h6>Posted on {{format_date post.created_on}}</h6>
+        <button class="btn btn-danger delPostBtn">X</button>
+    </div>
+</div>
 {{/each}}
+<div class="container text-center">
+    <button class="btn btn-success">+Add Post+</button>
+</div>
+<script src="/js/addPost.js"></script>
