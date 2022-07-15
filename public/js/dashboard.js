@@ -1,7 +1,7 @@
 const delPost = async (event) => {
     const id = event.target.dataset.id;
 
-    const response = await fetch(`api/${id}`, {
+    const response = await fetch(`api/post/${id}`, {
         method: 'DELETE'
     });
 

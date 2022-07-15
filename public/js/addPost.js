@@ -11,7 +11,7 @@ const addPostHandler = async (event) => {
             body: JSON.stringify({ title, post_content}),
             headers: { 'Content-Type': 'application/json' }
         });
-        console.log(response)
+
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {
@@ -20,10 +20,4 @@ const addPostHandler = async (event) => {
     }
 };
 
-const addComHandler = async () => {
-    
-};
-
 document.querySelector('#addPostBtn').addEventListener('click', addPostHandler);
-
-// document.querySelector('#addComBtn').addEventListener('click', addComHandler);

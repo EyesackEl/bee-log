@@ -12,7 +12,7 @@
         <p>{{post.post_content}}</p>
     </div>
 
-    <button id='addCommentBtn' class="btn btn-info" role="button">Add a Comment</button>
+    <a href="/new-comment/?post_id={{post.id}}"><div id='addCommentBtn' class="btn btn-info" role="button">Add a Comment</div></a>
 </div>
 {{#each comments as |comment|}}
     <div class="container my-3 bdr comment">

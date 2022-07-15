@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/post/:id', auth, async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
@@ -56,7 +56,7 @@ router.get('/post/:id', auth, async (req, res) => {
     }
 });
 
-router.get('/post/:id/new-comment', auth, async (req, res) => {
+router.get('/new-comment', auth, async (req, res) => {
     try {
         res.render('new-comment', {
             logged_in: req.session.logged_in
