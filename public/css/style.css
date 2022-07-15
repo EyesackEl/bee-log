@@ -23,7 +23,7 @@
 .delPostBtn {
     position: absolute;
     bottom: 25%;
-    right: 0
+    right: 5px;
 }
 
 #addCommentBtn {
@@ -34,4 +34,8 @@
 
 .comment {
     width: 45%;
+}
+
+#addContentBox {
+    width: 50%
 }

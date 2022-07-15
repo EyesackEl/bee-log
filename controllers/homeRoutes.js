@@ -56,6 +56,17 @@ router.get('/post/:id', auth, async (req, res) => {
     }
 });
 
+router.get('/post/:id/new-comment', auth, async (req, res) => {
+    try {
+        res.render('new-comment', {
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 router.get('/dashboard', auth, async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -107,6 +118,16 @@ router.get('/dashboard/post/:id', async (req, res) => {
     }
 });
 
+router.get('/dashboard/new-post', auth, async (req, res) => {
+    try {
+        res.render('new-post', {
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);  
+    }
+});
+
 router.get('/login', (req, res) => {
     try {
         if(req.session.logged_in) {
@@ -120,20 +141,6 @@ router.get('/login', (req, res) => {
     }
 });
 
-router.get('/new-comment', auth, async (req, res) => {
-    try {
-        res.render('new-comment');
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
 
-router.get('/new-post', auth, async (req, res) => {
-    try {
-        res.render('new-post');
-    } catch (err) {
-        res.status(500).json(err);  
-    }
-});
 
 module.exports = router;

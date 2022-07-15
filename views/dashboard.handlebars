@@ -5,11 +5,11 @@
             <a href='/dashboard/post/{{post.id}}'>{{post.title}}</a>
         </h3>
         <h6>Posted on {{format_date post.created_on}}</h6>
-        <button class="btn btn-danger delPostBtn">X</button>
+        <button class="btn btn-danger delPostBtn" data-id="{{post.id}}">X</button>
     </div>
 </div>
 {{/each}}
 <div class="container text-center">
-    <button class="btn btn-success">+Add Post+</button>
+    <a href="/dashboard/new-post" class="btn btn-success">+Add Post+</a>
 </div>
-<script src="/js/addPost.js"></script>
+<script src="/js/dashboard.js"></script>
