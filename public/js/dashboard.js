@@ -25,7 +25,7 @@ const addPostHandler = async (event) => {
             body: JSON.stringify({ title, post_content}),
             headers: { 'Content-Type': 'application/json' }
         });
-        console.log(response)
+
         if (response.ok) {
             document.location.replace('/dashboard');
         } else {

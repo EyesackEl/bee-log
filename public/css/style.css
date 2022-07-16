@@ -1,15 +1,27 @@
 :root {
-    --primary: ;
-    --secondary: ;
+    --primary: #2E4148;
+    --secondary: #628f8a;
+    --tertiary: #42da5e;
+    --quartenary: #f7ca41;
+}
+
+body {
+    background-color: var(--primary)
+}
+
+header {
+    background-color: var(--secondary);
 }
 
 .bdr {
-    border: 2px dotted red;
+    border: 2px solid var(--secondary);
+    border-radius: 2px;
 }
 
 .post {
     height: 300px;
     width: 50%;
+    background-color: var(--quartenary);
 }
 
 .postSnip {
@@ -18,6 +30,10 @@
 
 .postBox {
     position: relative;
+}
+
+.post-header {
+    background-color: var(--tertiary)
 }
 
 .delPostBtn {
@@ -34,8 +50,10 @@
 
 .comment {
     width: 45%;
+    background-color: var(--quartenary)
 }
 
 #addContentBox {
-    width: 50%
+    width: 50%;
+    background-color: var(--tertiary)
 }

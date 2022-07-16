@@ -6,8 +6,9 @@ const {User} = require('../../models')
 // Handles sign up requests
 router.post('/', async (req, res) => {
     try {
+        console.log(req.body)
         const userData = await User.create(req.body);
-        console.log(userData);
+
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -23,7 +24,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: {email: req.body.email }});
-        console.log(`\n\t${userData} CONSOLE.LOG`);
+
         if (!userData) {
             res.status(400).json('Incorrect login credentials');
             return;

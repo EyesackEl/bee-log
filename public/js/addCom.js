@@ -7,7 +7,7 @@ const addComHandler = async (e) => {
 
     const bodyJson = JSON.stringify({ comment_text, post_id })
 
-    console.log(bodyJson)
+
 
     if(comment_text) {
         const response = await fetch ('/api/comment', {

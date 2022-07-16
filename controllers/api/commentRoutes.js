@@ -4,6 +4,7 @@ const auth = require('../../utils/auth');
 
 //* /api/comment endpoint
 
+// Handles creating comments
 router.post('/', async (req, res) => {
     try {
         const commentData = await Comment.create({
@@ -17,6 +18,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+// Handles deleting comments
 router.delete('/:id', auth, async (req, res) => {
     try {
         const commentData = await Comment.destroy({
