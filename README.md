@@ -2,6 +2,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies Used](#technologies)
 - [License](#license)
 
 Reach the author of this README at [isaac.laflamme@gmail.com](mailto:isaac.laflamme@gmail.com)
@@ -11,6 +12,13 @@ This project is a CMS style blog page made with express and mysql. It features a
 
 ## Installation
 to install first clone the repository to your machine and run npm init and npm install to install all pre-requisite packages. Populate the .env file with your sql credentials and run the schema in the /db folder. Begin the server with npm run and enjoy the bee-log!
+
+## Technologies
+   * MySQL
+   * HandleBars
+   * Node JS
+   * Express JS
+   *
 
 ## Usage
 This project is a great way to stay in contact with other family members that use the same machine as you!
