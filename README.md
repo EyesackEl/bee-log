@@ -1,9 +1,9 @@
 # Bee-Log
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [Technologies Used](#technologies)
 - [License](#license)
+- [Deployed Link](#deployed)
 
 Reach the author of this README at [isaac.laflamme@gmail.com](mailto:isaac.laflamme@gmail.com)
 
@@ -20,8 +20,8 @@ to install first clone the repository to your machine and run npm init and npm i
    * Express JS
    *
 
-## Usage
-This project is a great way to stay in contact with other family members that use the same machine as you!
+## Deployed
+https://vast-tor-85167.herokuapp.com/
 
 ## License
 [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
